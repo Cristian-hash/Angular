@@ -7,14 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  @Input() nameUser:any; //definimos el input nameUser
+  @Input() nameUser:any;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  sayHello(nameUser:any) { //para una alerta personalizada
+
+
+
+  
+  sayHello(nameUser:any) { 
     alert("Hola " + nameUser);
   }
-
+  
 }
