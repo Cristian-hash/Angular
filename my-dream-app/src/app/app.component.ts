@@ -1,36 +1,47 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({    
+  selector: 'app-root',  
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css']    
 })
+
 export class AppComponent {
+  users = ["ryan", "joe", "cameron", "john"];   
+  activated = false; 
+
   title = 'my-dream-app';
-  name: string;
+  name: string;   
+  age: number;
   email;
-  webpage:string;
-  hobbies:string[];
-  showHobbies:boolean;
-
-
-  constructor(){
-    console.log("Constructor working...");
-    this.name="Crhistian Pacori Paucar";
-    this.email ="cpacori@unsa.edu.pe";
-    this.webpage="http://www.unsa.edu.pe";
-    this.hobbies=["futbol","programacion","netflix"];
-    this.showHobbies=false;
+  webpage: string;
+  hobbies: string[];  
+  showHobbies: boolean;   
+  
+  constructor() {   
+    this.name = 'Crhistian Pacori';    
+    this.age = 26;
+    this.email = 'cpacori@unsa.edu.pe';
+    this.webpage = 'http://www.unsa.edu.pe';
+    this.hobbies = ["Futbol", "Programacion", "Netflix"];   
+    this.showHobbies = false;  
   }
 
-  toggleHobbies(){
+  toggleHobbies() {   
     this.showHobbies = !this.showHobbies;
   }
-
-  newHobby(hobby){
-    //console.log(hobby);
-    this.hobbies.push(hobby.value);
-    hobby.value="";
-    return false;
+  
+  newHobby(hobby: any) {   
+    console.log(hobby.value);  
+    this.hobbies.push(hobby.value);   
+    hobby.value = "";   
+    return false;   
   }
+  sayHello(){
+    alert("Hola desde app.component")
+  }
+
+
+
 }
+    
