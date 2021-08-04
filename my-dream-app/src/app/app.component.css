@@ -1,0 +1,14 @@
+.black{
+    background-color:black;
+    color:white;
+}
+.ash{
+    background-color:#eee;
+    color:black;
+}
+
+.componet2 {
+    background-color:#555;
+    color:red;
+    padding: 20px;
+}
