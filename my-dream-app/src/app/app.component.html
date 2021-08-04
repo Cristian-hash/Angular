@@ -18,6 +18,10 @@
     <a href="{{ webpage }}" target="_blank">Visita mi sitio web</a>
 </div>
 
+<form (submit)="newHobby(hobby)">
+  <input #hobby type="text" placeholder="hobby">
+</form>
+
 <div class="black">
     <h1>{{ title }}</h1>
 </div>
