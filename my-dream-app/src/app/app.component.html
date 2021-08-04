@@ -47,3 +47,11 @@
     {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
   </li>
 </ul>
+
+<h1>Agregando nuevos usuarios</h1>
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser> 
+  <button>Agregar Usuario</button>
+</form>
+
+<br>
